@@ -1,0 +1,185 @@
+/* 1. Reset & variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #333333;
+    --color-muted: #666666;
+    --color-accent: #0077cc;
+    --font-base: 'Helvetica Neue', Arial, sans-serif;
+    --spacing: 1rem;
+  }
+  
+  /* 2. Global styles */
+  body {
+    font-family: var(--font-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    padding-bottom: var(--spacing);
+  }
+  
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 3. Header & navigation */
+  header {
+    text-align: center;
+    padding: calc(var(--spacing) * 2) 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid #eee;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  header p {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+  }
+  
+  nav {
+    margin-top: var(--spacing);
+  }
+  
+  nav a {
+    margin: 0 var(--spacing);
+    font-weight: bold;
+    color: var(--color-text);
+  }
+  
+  nav a:hover {
+    color: var(--color-accent);
+  }
+  
+  /* 4. Hero section (index.html) */
+  #hero {
+    text-align: center;
+    padding: calc(var(--spacing) * 3) var(--spacing);
+  }
+  
+  #hero img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+    margin-bottom: var(--spacing);
+  }
+  
+  #hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--color-text);
+    font-size: 1.1rem;
+  }
+  
+  /* 5. About section (about.html) */
+  #about {
+    max-width: 800px;
+    margin: var(--spacing) auto;
+    padding: 0 var(--spacing);
+  }
+  
+  #about h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing);
+    text-align: center;
+  }
+  
+  #about p {
+    margin-bottom: calc(var(--spacing) * 1.5);
+    color: var(--color-text);
+  }
+  
+  #about a {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  #about a:hover {
+    background-color: #005fa3;
+  }
+  
+  /* 6. Projects section (projects.html) */
+  #projects {
+    max-width: 1000px;
+    margin: var(--spacing) auto;
+    padding: 0 var(--spacing);
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing);
+    text-align: center;
+  }
+  
+  .project-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: var(--spacing);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing);
+    align-items: center;
+    padding: var(--spacing);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-card p {
+    margin-bottom: var(--spacing);
+    color: var(--color-muted);
+  }
+  
+  .project-card a {
+    margin-right: var(--spacing);
+  }
+  
+  /* 7. Footer */
+  footer {
+    text-align: center;
+    padding: var(--spacing);
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    border-top: 1px solid #eee;
+    margin-top: calc(var(--spacing) * 2);
+  }
+  
+  /* 8. Responsive */
+  @media (max-width: 768px) {
+    .project-card {
+      grid-template-columns: 1fr;
+    }
+  
+    nav a {
+      display: block;
+      margin: var(--spacing) 0;
+    }
+  }
